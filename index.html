@@ -13,9 +13,16 @@
 </head>
 <body>
     <main id="app">
+        <button @click="onClickMail">Genera indirizzi email casuali</button>
 
+        <h3>Random email list</h3>
 
-        
+        <ul>
+            <li v-for="(mail, index) in emailList"> 
+                {{ index + 1 }}: {{ mail }}
+            </li>
+        </ul>
+
     </main>
 
     <script src="scripts/app.js"></script>
