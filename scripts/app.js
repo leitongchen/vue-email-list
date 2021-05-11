@@ -6,7 +6,8 @@ new Vue({
     },
     methods: {
         onClickMail() {
-
+            this.emailList = [];
+            
             const getMailLoops = 10; 
             let arrayOfMail = []
             
@@ -22,7 +23,6 @@ new Vue({
 
                     if (arrayOfMail.length === getMailLoops) {
 
-                         
                         this.emailList.push(...arrayOfMail);
                         console.log(`email list ${arrayOfMail}`)
                     }
