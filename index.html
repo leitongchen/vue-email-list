@@ -13,15 +13,25 @@
 </head>
 <body>
     <main id="app">
-        <button @click="onClickMail">Genera indirizzi email casuali</button>
+        <div class="container">
 
-        <h3>Random email list</h3>
+            <h1>MAIL GENERATOR</h1>
 
-        <ul>
-            <li v-for="(mail, index) in emailList"> 
-                {{ index + 1 }}: {{ mail }}
-            </li>
-        </ul>
+            <button @click="onClickMail">Genera mail</button>
+            
+            <div v-if="emailList.length > 0" class="mail-container">
+                <h3>Ecco le tue mail:</h3>
+
+                <ul>
+                    <li v-for="(mail, index) in emailList"> 
+                        {{ index + 1 }}: 
+                       <span class="color-pink"> {{ mail }} </span>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
 
     </main>
 
